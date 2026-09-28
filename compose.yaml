@@ -1,0 +1,26 @@
+services:
+  familyos:
+    build: .
+    ports:
+      - "127.0.0.1:${FAMILYOS_PORT:-8080}:8080"
+    environment:
+      FAMILYOS_DB: /data/familyos.db
+      FAMILYOS_HOST: 0.0.0.0
+      FAMILYOS_PORT: 8080
+      FAMILYOS_SECURE_COOKIES: "${FAMILYOS_SECURE_COOKIES:-false}"
+      FAMILYOS_BUTLER_STATE_URL: ""
+      FAMILYOS_VOICE_ASR_URL: ""
+      FAMILYOS_OLLAMA_URL: "${FAMILYOS_OLLAMA_URL:-}"
+      FAMILYOS_OLLAMA_MODEL: "${FAMILYOS_OLLAMA_MODEL:-}"
+      FAMILYOS_CLOUD_API_URL: "${FAMILYOS_CLOUD_API_URL:-}"
+      FAMILYOS_CLOUD_API_KEY: "${FAMILYOS_CLOUD_API_KEY:-}"
+      FAMILYOS_CLOUD_MODEL: "${FAMILYOS_CLOUD_MODEL:-}"
+    volumes:
+      - familyos-data:/data
+    read_only: true
+    tmpfs:
+      - /tmp:size=16m,mode=1777
+    cap_drop: [ALL]
+    security_opt: [no-new-privileges:true]
+volumes:
+  familyos-data:

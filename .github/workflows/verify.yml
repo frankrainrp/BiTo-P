@@ -1,0 +1,28 @@
+name: Verify FamilyOS
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r requirements-dev.txt
+      - run: python -m compileall -q familyos agents examples
+      - run: python -m unittest discover -s tests -v
+      - run: python examples/demo.py
+      - run: docker compose config --quiet
+      - name: Container smoke test
+        run: |
+          docker build -t familyos-showcase:ci .
+          docker run -d --name familyos-test --network none familyos-showcase:ci
+          trap 'docker logs familyos-test; docker rm -f familyos-test' EXIT
+          for attempt in $(seq 1 20); do
+            if docker exec familyos-test python -m familyos.healthcheck; then exit 0; fi
+            sleep 2
+          done
+          exit 1
