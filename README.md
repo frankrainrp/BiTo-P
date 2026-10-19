@@ -27,6 +27,12 @@ A shared task list becomes more useful when it knows whose task it is, whether a
 | Scheduled work and source monitoring | Schedule previews, cooldowns, deduplication and destination validation | [Schedule tests](tests/test_agent_schedule.py), [monitor tests](tests/test_monitoring.py) |
 | Reproducible delivery | Dependency-pinned checks, synthetic HTTP demo and an isolated container smoke test | [CI workflow](.github/workflows/verify.yml) |
 
+## Download
+
+[Windows API bundle and source package](https://github.com/frankrainrp/FamilyOS-Showcase/releases/tag/v0.1.0) · [Server/client component guide](docs/DISTRIBUTION.md) · [Planned illustration brief](docs/DIAGRAM_BRIEF.md)
+
+The Windows bundle includes Python: extract it and run `Run-Demo.cmd` for a fictional-data review, or `Start-Server.cmd` for a persistent loopback API. The public edition has no production browser UI.
+
 ## Try it in two minutes
 
 Requires Python 3.12 or newer. Run from the repository root:

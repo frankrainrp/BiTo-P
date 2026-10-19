@@ -22,3 +22,7 @@ Python 3.12+ 环境安装 `requirements-dev.txt` 后即可运行演示与 `pytho
 - 通过 GitHub Actions 验证测试、Compose 与隔离容器健康。
 
 当前用户名登录属于可信本地环境模式，不能直接用于公网身份验证。公开源码不等于公开运行私人服务；本仓库没有通往私人服务器的自动发布连接。
+
+## 下载
+
+[Windows API 便携包及源码包](https://github.com/frankrainrp/FamilyOS-Showcase/releases/tag/v0.1.0)：便携包已带 Python，解压后运行 `Run-Demo.cmd` 或 `Start-Server.cmd`。公开版不含生产网页 UI。[组成与端口](DISTRIBUTION.md)；[待制作的两类图](DIAGRAM_BRIEF.md)。

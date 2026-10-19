@@ -3,6 +3,7 @@ import base64
 from pathlib import Path
 import tempfile
 import unittest
+from unittest.mock import patch
 
 from familyos.activity import ActivityService
 from familyos.db import Database
@@ -74,7 +75,9 @@ class ActivityTests(unittest.TestCase):
 
     def test_history_keeps_member_data_and_labels_observation_limits(self):
         self.service.ingest(self.member, self.payload(), now=self.now)
-        result = self.service.history(self.member, "30d")
+        with patch("familyos.activity.datetime", wraps=datetime) as clock:
+            clock.now.return_value = self.now
+            result = self.service.history(self.member, "30d")
         self.assertEqual(result["range"], "30d")
         self.assertEqual(result["totals"]["sample_size"], 1)
         self.assertEqual(result["totals"]["observed_minutes"], 5.0)
