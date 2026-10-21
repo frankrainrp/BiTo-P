@@ -1,4 +1,4 @@
-<p align="center"><img src="docs/assets/familyos-logo.png" alt="FamilyOS logo" width="120"></p>
+<p align="center"><img src="docs/assets/familyos-mark.svg" alt="FamilyOS logo" width="120"></p>
 
 # FamilyOS — Household Coordination API
 
