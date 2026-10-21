@@ -1,20 +1,15 @@
-# FamilyOS distribution guide
+# Installation and components
 
-[Download v0.1.0](https://github.com/frankrainrp/FamilyOS-Showcase/releases/tag/v0.1.0) · [中文介绍](README.zh-CN.md)
+| Component | Start | Interface |
+|---|---|---|
+| Windows API package | Extract `FamilyOS-API-Windows-x64.zip`; run `Start-Server.cmd` | HTTP API at `127.0.0.1:8080` |
+| Synthetic demo | Run `Run-Demo.cmd` | Temporary HTTP service and console checks |
+| Source | Python 3.12+ or Docker Compose | Python services, tests, migrations and HTTP demo |
 
-| Package | Contents | Start | Address |
-|---|---|---|---|
-| `FamilyOS-API-Windows-x64.zip` | Public API, migrations, examples/tests, Python runtime and pinned dependencies | `Run-Demo.cmd` or `Start-Server.cmd` | `http://127.0.0.1:8080` |
-| `FamilyOS-Source.zip` | Public API source, Dockerfile, Compose, examples, tests and optional activity-processing source | Python 3.12+ or Docker | `http://127.0.0.1:8080` |
+[Release downloads](https://github.com/frankrainrp/FamilyOS-Showcase/releases/tag/v0.1.0)
 
-Extract the Windows package into a writable folder. No global Python installation or administrator rights are needed. `Run-Demo.cmd` creates fictional members and tasks through a temporary HTTP server, prints four PASS results, then removes its temporary data. `Start-Server.cmd` runs the real API on loopback and keeps a database in `data/familyos.db`. Stop the console with Ctrl+C.
+The Windows package includes Python 3.12.10 and pinned dependencies. Extract into a writable directory. `Start-Server.cmd` creates `data/familyos.db`; stop with Ctrl+C. `Run-Demo.cmd` uses fictional records in temporary storage.
 
-The public edition has **no production browser UI or separate end-user client installer**. The bundled HTTP demo is the review client. `agents/windows_activity/collector.py` is optional processing source, not a complete installed screenshot-capture service. For Linux/macOS, use the source package or Docker Compose.
+The HTTP demo is the included client. This distribution is the API edition; the Bito browser application is maintained separately. Optional activity-processing source is included under `agents/windows_activity/`.
 
-Models and speech endpoints are optional and configured through environment variables. The basic demo requires no model, API key, household server or external account. Python 3.12.10, websocket-client 1.9.2, Pillow 12.2.0 and tzdata 2026.2 retain their distribution notices in the Windows package.
-
-Keep the API on loopback: its username-only sign-in represents trusted local identity, not public internet authentication. No private production UI, household database, raw screenshot, model weight or deployment credential is included.
-
-Two illustrations are deferred: [technical and non-technical diagram brief](DIAGRAM_BRIEF.md).
-
-中文：Windows 便携包包含 Python 运行时。解压后用 `Run-Demo.cmd` 运行虚构数据演示，或用 `Start-Server.cmd` 启动本地 API。公开版没有生产网页客户端，不能当作含完整 UI 的整套软件。源码包支持 Python / Docker 部署；个人数据、模型、私人服务地址均不打包。
+Source archives include agent instructions, complete maintained source, tests, migrations, CI and Docker configuration. Runtime packages additionally contain Python and dependencies with their notices. Model weights and speech services are installed separately. Keep the username-based API on a trusted local network with the default loopback binding.
