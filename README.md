@@ -2,7 +2,7 @@
 
 # BiTo-P
 
-[Download source (main ZIP)](https://github.com/frankrainrp/BiTo-P/archive/refs/heads/main.zip)
+[Download source (main ZIP)](https://github.com/frankrainrp/BiTo-P/archive/refs/heads/main.zip) · [Demo walkthrough](docs/DEMO.md)
 
 FamilyOS provides member-scoped tasks, calendar events, habits and activity summaries through a Python HTTP API. SQLite stores household records and execution history. The assistant converts natural-language requests into validated proposals; confirmed actions execute through domain services.
 
