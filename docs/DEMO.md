@@ -2,10 +2,6 @@
 
 [Download source from main](https://github.com/frankrainrp/BiTo-P/archive/refs/heads/main.zip)
 
-[![Watch the API task walkthrough](assets/bitop-demo-poster.png)](assets/bitop-task-demo.mp4)
-
-[Watch or download the 23-second video](https://github.com/frankrainrp/BiTo-P/raw/refs/heads/main/docs/assets/bitop-task-demo.mp4)
-
 ## Run the bundled demo
 
 Use Python 3.12 or newer. After extracting the ZIP, open a terminal in `BiTo-P-main`:
@@ -46,10 +42,6 @@ The walkthrough uses the real HTTP operations in the bundled client:
 5. The SQLite row retains the task with status `completed`; the active-task response no longer includes it.
 
 An unauthenticated request to the active-task endpoint is also checked and returns HTTP `401`.
-
-## What the video shows
-
-The video visualizes captured HTTP responses and the resulting SQLite record from an actual synthetic run. It follows the same task through `POST /api/tasks`, its completion endpoint, and the stored row. The workbench graphics explain that captured result; they are not a bundled household dashboard or a live AI response.
 
 ## The browser page
 
