@@ -1,0 +1,26 @@
+WEBVTT
+
+NOTE
+Optional English descriptions of actual recorded UI actions.
+Manual task flow only. No generated AI response or automated run is shown.
+Original labels, including Chinese labels, remain unchanged in the video.
+
+1
+00:00:00.048 --> 00:00:02.182
+Open Calendar in the app's built-in English mode.
+
+2
+00:00:02.182 --> 00:00:03.398
+Open the native task form on Calendar.
+
+3
+00:00:03.398 --> 00:00:06.050
+Enter "Check server backups" manually.
+
+4
+00:00:06.050 --> 00:00:09.680
+Save the task to the today list.
+
+5
+00:00:09.680 --> 00:00:13.033
+Reload the page and confirm the saved task remains.

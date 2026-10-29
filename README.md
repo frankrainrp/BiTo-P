@@ -14,6 +14,14 @@ This public repository contains the server component and a demo using fictional 
 
 [Windows API and source downloads](https://github.com/frankrainrp/BiTo-P/releases/tag/v0.1.0) · [Component guide](docs/DISTRIBUTION.md) · [Engineering](docs/ENGINEERING.md)
 
+## Recorded walkthrough
+
+The 13-second recording shows the full BiTo household application with fictional data: add a task in Calendar, then reload to confirm it remains. The recorded household interface is maintained separately from this public API package.
+
+[![Watch the BiTo household task walkthrough](docs/assets/bito-real-page-demo-poster.jpg)](docs/assets/bito-real-page-demo.mp4)
+
+[Watch MP4](docs/assets/bito-real-page-demo.mp4) · [Download MP4](https://raw.githubusercontent.com/frankrainrp/BiTo-P/main/docs/assets/bito-real-page-demo.mp4) · [English captions](docs/assets/bito-real-page-demo.en.vtt) · [Recorded steps and public API setup](docs/DEMO.md)
+
 ## Implementation
 
 | Capability | Mechanism | Source |
