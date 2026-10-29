@@ -1,4 +1,4 @@
-# BiTo-P API walkthrough
+# BiTo API walkthrough
 
 [Download source from main](https://github.com/frankrainrp/BiTo-P/archive/refs/heads/main.zip)
 
@@ -53,7 +53,7 @@ The video visualizes captured HTTP responses and the resulting SQLite record fro
 
 ## The browser page
 
-The public package includes a small API information page and a health endpoint. Its runnable review client is `examples/demo.py`. The private Bito application and its household interface remain separate from this public repository.
+The public package includes a small API information page and a health endpoint. Its runnable review client is `examples/demo.py`. The private BiTo application and its household interface remain separate from this public repository.
 
 ## Source references
 

@@ -1,10 +1,14 @@
 <p align="center"><img src="docs/assets/familyos-mark.svg" alt="FamilyOS logo" width="120"></p>
 
-# BiTo-P
+# BiTo
 
 [Download source (main ZIP)](https://github.com/frankrainrp/BiTo-P/archive/refs/heads/main.zip) · [Demo walkthrough](docs/DEMO.md)
 
-FamilyOS provides member-scoped tasks, calendar events, habits and activity summaries through a Python HTTP API. SQLite stores household records and execution history. The assistant converts natural-language requests into validated proposals; confirmed actions execute through domain services.
+BiTo is an AI agent for personal and household assistance. It helps users set up tasks on a private server and manage everyday affairs with less repetitive work. The project is designed to learn users' routines over time through separately configured cameras and background activity monitoring.
+
+An independent personal project, designed and developed by Feng Kaiduo.
+
+This public repository contains the server component and a demo using fictional household records. The full household interface and camera integrations are maintained separately.
 
 **Python · SQLite · HTTP APIs · Docker · GitHub Actions**
 
@@ -52,7 +56,7 @@ The persistent Windows entry point is `Start-Server.cmd`. Its database is create
 
 ## Model and client integration
 
-Ollama and OpenAI-compatible endpoints are configured server-side. The model is selected by deployment settings; deterministic planning and statistics execute in Python. This API edition includes a synthetic HTTP review client. The separate Bito deployment adds the household application interface and configured speech/model services.
+Ollama and OpenAI-compatible endpoints are configured server-side. The model is selected by deployment settings; deterministic planning and statistics execute in Python. This API edition includes a synthetic HTTP review client. The separate BiTo deployment adds the household application interface and configured speech/model services.
 
 Username-based identity is intended for a trusted local environment. The default API and Docker listener bind to loopback. Production household data, credentials, model weights and the production UI are maintained separately.
 
