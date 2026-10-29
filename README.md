@@ -1,12 +1,14 @@
 <p align="center"><img src="docs/assets/familyos-mark.svg" alt="FamilyOS logo" width="120"></p>
 
-# FamilyOS — Household Coordination API
+# BiTo-P
+
+[Download source (main ZIP)](https://github.com/frankrainrp/BiTo-P/archive/refs/heads/main.zip)
 
 FamilyOS provides member-scoped tasks, calendar events, habits and activity summaries through a Python HTTP API. SQLite stores household records and execution history. The assistant converts natural-language requests into validated proposals; confirmed actions execute through domain services.
 
 **Python · SQLite · HTTP APIs · Docker · GitHub Actions**
 
-[Windows API and source downloads](https://github.com/frankrainrp/FamilyOS-Showcase/releases/tag/v0.1.0) · [Component guide](docs/DISTRIBUTION.md) · [Engineering](docs/ENGINEERING.md)
+[Windows API and source downloads](https://github.com/frankrainrp/BiTo-P/releases/tag/v0.1.0) · [Component guide](docs/DISTRIBUTION.md) · [Engineering](docs/ENGINEERING.md)
 
 ## Implementation
 
@@ -25,8 +27,8 @@ FamilyOS provides member-scoped tasks, calendar events, habits and activity summ
 Requires Python 3.12+:
 
 ```sh
-git clone https://github.com/frankrainrp/FamilyOS-Showcase.git
-cd FamilyOS-Showcase
+git clone https://github.com/frankrainrp/BiTo-P.git
+cd BiTo-P
 python -m venv .venv
 ```
 
